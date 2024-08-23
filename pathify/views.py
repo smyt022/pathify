@@ -5,12 +5,27 @@ from databaseApp.models import *
 from django.http import JsonResponse
 #from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required #decorator that can be used for some views functions
 
 
 #helper endpoint
-def is_authenticated(request):
-    return JsonResponse({'is_authenticated': request.user.is_authenticated})
+def user_info(request):
+    user_info = {
+        'is_authenticated': request.user.is_authenticated,
+        'username': request.user.username,
+        'courses': []
+    }
+    
+    #add courses if user is authenticated
+    if(request.user.is_authenticated):
+        #populate courses 
+        for course in request.user.courses.all():
+            course_info = {
+                'title': course.title,
+                'description': course.description
+            }
+            user_info['courses'].append(course_info)
+    
+    return JsonResponse(user_info)
 
 def logout_view(request):
     logout(request)
