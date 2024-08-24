@@ -21,8 +21,34 @@ def user_info(request):
         for course in request.user.courses.all():
             course_info = {
                 'title': course.title,
-                'description': course.description
+                'description': course.description,
+                'units': []
             }
+            
+            #populate the units for the course_info
+            for unit in course.units.all():
+                unit_info = {
+                    'title': unit.title,
+                    'description': unit.description,
+                    'lessons': []
+                }
+                
+                #populate the lessons for the unit_info
+                for lesson in unit.lessons.all():
+                    lesson_info = {
+                        'title': lesson.title,
+                        'description': lesson.description,
+                        'reading_material': lesson.reading_material,
+                        'video_link': lesson.video_link,
+                        'practice_exercise': lesson.practice_exercise
+                    }
+                    #add lesson to unit_info lessons
+                    unit_info['lessons'].append(lesson_info)
+                
+                #add unit to course_info units
+                course_info['units'].append(unit_info)
+            
+            #add course to user_info courses
             user_info['courses'].append(course_info)
     
     return JsonResponse(user_info)
