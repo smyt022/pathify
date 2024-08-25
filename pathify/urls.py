@@ -21,6 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/create_course/', views.create_course_view, name='api-createCourse'),
     path('api/logout/', views.logout_view, name='api-logout'),
     path('api/user_info/', views.user_info, name='api-userInfo'), #backend route to check if user is authenticated
     path('api/signup/', views.signup_view, name='api-signup'), #backend api route
