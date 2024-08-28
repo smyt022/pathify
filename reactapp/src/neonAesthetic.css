@@ -1,0 +1,241 @@
+/* Body styles */
+body {
+    background-color: #1a1a1a; /* Dark background */
+    color: #c8e1ff; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.lesson-details-container {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff99;
+  max-width: 800px;
+  margin: auto;
+}
+
+.course-title, .lesson-title {
+  color: #00ff99;
+  text-shadow: 0 0 10px #00ff99;
+}
+
+.lesson-description, .reading-material, .video-link, .practice-exercise {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.reading-material h4, .video-link h4, .practice-exercise h4 {
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99;
+  margin-bottom: 10px;
+}
+
+.video-frame {
+  width: 100%;
+  height: 315px;
+  border: 2px solid #00ff99;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.logout-button {
+  background-color: #00ff99;
+  color: #1c1c1c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #1c1c1c;
+  box-shadow: 0 0 10px #00ff99;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.logout-button:hover {
+  background-color: #00cc7a;
+  box-shadow: 0 0 15px #00cc7a;
+}
+
+
+/* Unit Dropdown */
+.unit-dropdown {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.unit-button {
+  width: 100%;
+  background-color: #1c1c1c;
+  color: #00ff99;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.unit-button:hover {
+  background-color: #333;
+}
+
+/* Unit Description */
+.unit-description {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #e0e0e0;
+}
+
+/* Lesson List */
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.lesson-link {
+  margin-top: 5px;
+  color: #00ff99;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lesson-link:hover {
+  color: #ff6600;
+}
+
+
+/* Container for the course cards */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Style for each course card */
+.course-card {
+  background-color: #2a2a2a; /* Slightly lighter dark background */
+  border: 2px solid #00ff99; /* Neon green border */
+  border-radius: 8px;
+  padding: 20px;
+  color: #e0e0e0; /* Text color */
+  box-shadow: 0px 0px 15px #00ff99; /* Neon green glow */
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+/* Hover effect for course cards */
+.course-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0px 0px 25px #00ff99; /* Increase the neon glow on hover */
+}
+
+/* Title styles for course cards */
+.course-card h4 {
+  margin: 0 0 10px 0;
+  color: #00ff99; /* Neon green for the title */
+}
+
+/* Description styles for course cards */
+.course-card p {
+  color: #e0e0e0; /* Light text for description */
+}
+
+/* Header styles */
+h1, h3 {
+  color: #00ff99; /* Neon green headers */
+  text-shadow: 0px 0px 10px #00ff99; /* Neon glow for headers */
+}
+
+
+/* Link styles */
+.linkStyle {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main container */
+.mainStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form styles */
+.formStyle {
+    background-color: #1c1c1c;
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px #00ff99;
+    max-width: 400px;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+/* Input styles */
+.inputStyle {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #00ff99;
+    background-color: #333;
+    color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+/* Label styles */
+.labelStyle {
+    margin-bottom: 8px;
+    color: #00ff99;
+    font-weight: bold;
+}
+
+
+/* Button styles */
+.buttonStyle {
+    width: 20%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #00ff99;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonStyleOrange {
+  width: 20%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: 	#f1642c;
+  color: #1c1c1c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  background-color: #63d1db;
+}
+
+.buttonStyleOrange:hover {
+    background-color: #dbc763;
+}
