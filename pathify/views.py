@@ -105,7 +105,7 @@ def get_lesson_names_array(course_name, unit_name):
 #get_lesson_content(course_name, unit_name, lesson_name) 
 # #-> returns array of strings [description, reading material, video link, practice_exercise]
 def get_lesson_content(course_name, unit_name, lesson_name):
-    time.sleep(7)#add time delay so we dont overload google with requests and get error
+    time.sleep(4)#add time delay so we dont overload google with requests and get error
     
     #setup gemini
     gemini_key = get_gemini_api_key()
@@ -233,7 +233,7 @@ def create_course_view(request):
         #CREATING NEW COURSE
         
         #1. course model
-        new_course = Course(title=skill, description="this course is about: "+skill)
+        new_course = Course(title=skill, description="")
         new_course.save()
         new_course.user = request.user
         new_course.save()
@@ -244,7 +244,7 @@ def create_course_view(request):
         #create each unit
         for unit_name in unit_names:
             #2. create unit models
-            newUnit = Unit(title=unit_name, description="testing", course=new_course)
+            newUnit = Unit(title=unit_name, description="", course=new_course)
             newUnit.save()
             #prompt for lessons array
             lesson_names = get_lesson_names_array(skill, unit_name)
