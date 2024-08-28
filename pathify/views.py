@@ -239,7 +239,7 @@ def create_course_view(request):
         new_course.save()
         
         #prompt for units array
-        unit_names = get_unit_names_array(skill) #TESTING: just prints the gemini response for now
+        unit_names = get_unit_names_array(skill)
         
         #create each unit
         for unit_name in unit_names:
